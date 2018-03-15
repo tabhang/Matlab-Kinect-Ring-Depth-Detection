@@ -1,6 +1,3 @@
-%clear;
-clc;
-%gui_matlab;
 bt = Bluetooth('arm',1);
 fclose(bt);
 fopen(bt);
@@ -61,8 +58,8 @@ while true
     end
     end
 last_recieve = curr_recieve;
-delay_value = bitand(data_array(21),255,'int32');
+delay_value = bitand(data_array(4),255,'int32');
 disp(delay_value);
-%ff = num2str(delay_value);
+ff = num2str(delay_value);
 %set(handles.delay_here,'string',ff);
 end
